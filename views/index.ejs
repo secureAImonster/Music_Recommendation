@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= info.title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div id="header">
+		<h3><%= info.title %></h3>
+		<!--
+		<% if (info.is_logined) { %>
+			<h1><%= userName %></h1>
+		<% } else { %>
+			<form action="/" method="post">
+				<input type="text" name="userName" placeholder="username" />
+				<button type="submit">Login</button>
+			</form>
+		<% } %>
+		-->
+	</div>
+
+	<div class="main">
+   		<div class="introduction">	
+			<p>Welcome to <%= info.title %></p>
+			<p>I Know What You Wanna Listen</p>
+			<div class="userInfo" style="display: none"><%= info.user_id %></div>
+	   	</div>
+		<!-- .music__box -->
+		<div class="music__box">
+		  <!-- .music__description -->
+		  <div class="music__description">
+			<div class="music__id" style="display: none"><%= music.id %></div>
+			<div class="music__title">Title: <%= music.title %></div>
+			<div class="music__genre">Genre: <%= music.genre %></div>
+		  </div>
+		  
+		  <!-- .music__feedback -->
+		  <div class="music__feedback"> 
+			Feedback: 
+			<div class="btn__feedbacks">
+			  <button class="btn__feedback" data-status = 1> LIKE </button>
+			  <button class="btn__feedback" data-status = 0> SOSO </button>
+			  <button class="btn__feedback"  data-status = -1> HATE </button>
+			</div>
+		  </div>
+		  <!-- /.music__feedback -->
+		
+		
+		<div class = "btn__learning"><button> Start Learning </button></div>
+		</div>
+		<!-- /.music__box -->
+    </div> 	
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>
+		$(".btn__feedback").click(function(event) {
+      event.preventDefault();
+      var song_id = $('.music__id').text();
+			var status = $(this).data('status');
+			
+			$.get( "/api/feedback", { song_id: song_id, status: status } )
+			.done(function(data) {
+				alert(data.message);
+			});
+		});
+
+		$(".btn__learning").click(function(event) {
+      var user_id = $('.userInfo').text();
+      console.log(user_id);
+			$.get( "/api/learning", {user_id: user_id} )
+			.done(function(data) {
+				alert(data.message);
+			});
+		});
+	</script>
+  
+  </body>
+</html>

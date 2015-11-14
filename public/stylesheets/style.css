@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: #FEFEFE;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*   
+  header  
+*/
+#header{
+	height:50px;
+	width : 100%;
+	background: #fd5c63;
+	border-bottom:1px solid #CCC;
+	text-align: center;
+}
+
+#header form{
+
+}
+
+#header form input{
+	border:0;
+	padding:10px;
+	font-size:1.3em;
+	font-family:Arial, sans-serif;
+	color:#aaa;
+	border:solid 1px #ccc;
+	margin:0 0 20px;
+	width:300px;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+
+	-webkit-box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	-moz-box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#header form input:focus {
+	border:solid 1px #FD5C63;	
+}
+
+#header form button{
+	float: right;
+	font-size: 1em;	
+	font-weight: bold;
+	padding: 10px 30px;
+	background-color: #AFAFAF;
+	color: #fff;
+	border-style: none;
+	box-shadow: 2px 2px 3px 1px #666;
+	-moz-box-shadow: 2px 2px 3px 1px #666;
+	-webkit-box-shadow: 2px 2px 3px 1px #666;
+}
+
+#header form button:hover {
+	background-color: #AFAFAF;
+}
+
+#header h3{
+	color: #fff;
+	padding: 5px;
+	font-size: 28px;
+}
+
+/*
+  main
+*/
+.main{
+	width: 80%;
+	padding: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.introduction{
+	padding-bottom: 50px;
+}
+
+.music__feedback {
+	padding: 50px;
+}
+
+.btn__feedbacks button{
+	font-size: 1em;	
+	font-weight: bold;
+	padding: 10px 30px;
+	margin: 10px;
+	background-color: #AFAFAF;
+	color: #fff;
+	border-style: none;
+	box-shadow: 2px 2px 3px 1px #666;
+	-moz-box-shadow: 2px 2px 3px 1px #666;
+	-webkit-box-shadow: 2px 2px 3px 1px #666;
+	outline: none;
+}
+
+.btn__feedbacks button:active {
+	background-color: #FD5C63;
+}
+
+
+.btn__learning button{
+	font-size: 1em;	
+	font-weight: bold;
+	padding: 10px 30px;
+	margin: 10px;
+	background-color: #AFAFAF;
+	color: #fff;
+	border-style: none;
+	box-shadow: 2px 2px 3px 1px #666;
+	-moz-box-shadow: 2px 2px 3px 1px #666;
+	-webkit-box-shadow: 2px 2px 3px 1px #666;
+	outline: none;
+}
+
+.btn__learning button:active {
+	background-color: #FD5C63;
+}
